@@ -1,0 +1,35 @@
+.button-capsule {
+  background-color: #fff;
+  display: flex;
+  border-radius: 60px;
+  padding: 5px;
+  box-shadow: 3px 3px 5px #48b6ed;
+  div {
+    &:first-child {
+      width: 120px;
+      height: 120px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+
+    &:last-child {
+      padding: 10px;
+      text-align: left;
+      width: calc(100% - 120px);
+    }
+  }
+
+  span {
+    color: #12a0d6;
+    font-style: italic;
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 22px;
+    color: #002575;
+    line-height: 20px;
+  }
+}

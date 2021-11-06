@@ -1,0 +1,57 @@
+section.banner {
+  position: relative;
+  //   height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  //   &:before {
+  //     content: "";
+  //     position: absolute;
+  //     left: 0%;
+  //     top: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     pointer-events: none;
+  //     background-image: url("~assets/image/gradient.png");
+  //     background-position: center;
+  //     background-size: cover;
+  //     background-repeat: no-repeat;
+  //   }
+
+  .wrapper-text {
+    position: absolute;
+  }
+
+  img {
+    &.banner-desktop {
+      width: 100%;
+    }
+
+    &.img-text {
+      position: absolute;
+      transform: scale(0.7);
+      &.new {
+        left: 30%;
+        top: 10%;
+      }
+    }
+  }
+
+  img.banner-mobile {
+    display: none;
+  }
+
+  @media (max-width: 576px) {
+    height: unset;
+
+    .banner-desktop {
+      display: none;
+    }
+    img.banner-mobile {
+      display: block;
+      width: 100%;
+    }
+  }
+}

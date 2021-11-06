@@ -1,0 +1,128 @@
+nav {
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  a {
+    display: flex;
+  }
+
+  > div {
+    padding: 5px;
+    &.navigation-top {
+      background-color: #7fbdf0;
+      display: flex;
+      justify-content: flex-end;
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        li {
+          color: #fff;
+          font-size: 18px;
+          padding: 0 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+    &.navigation-bottom {
+      background-color: #4299f8;
+      position: relative;
+
+      &.mobile {
+        display: none;
+      }
+
+      &.desktop {
+        .container {
+          margin: auto;
+          padding: 0 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .wrapper-link {
+            width: calc(100% - 230px);
+            ul {
+              display: flex;
+              justify-content: space-evenly;
+              li {
+                padding: 0 10px;
+                a {
+                  color: #fff;
+                  font-size: 24px;
+                }
+              }
+            }
+          }
+          button {
+            font-size: 24px;
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        &.mobile {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          label {
+            position: relative;
+            width: 40px;
+            height: 25px;
+
+            span {
+              width: 100%;
+              height: 3px;
+              background-color: #fff;
+              position: absolute;
+
+              &:nth-child(1) {
+                top: 0;
+              }
+              &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              &:nth-child(3) {
+                bottom: 0;
+              }
+            }
+          }
+
+          button {
+            background-color: #f37102;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 2px 3px 2px #007bdf;
+
+            img {
+              width: 30px;
+            }
+          }
+        }
+
+        &.desktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 60px;
+  }
+}
