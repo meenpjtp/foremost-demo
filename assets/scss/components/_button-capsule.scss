@@ -1,13 +1,16 @@
 .button-capsule {
   background-color: #fff;
   display: flex;
-  border-radius: 60px;
+  align-items: center;
+  border-radius: 180px;
   padding: 5px;
-  box-shadow: 3px 3px 5px #48b6ed;
+//   box-shadow: 3px 3px 5px #0091e4;
+  box-shadow: 5px 5px 5px rgba(#054790, 0.5);
+  cursor: pointer;
   div {
     &:first-child {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -17,19 +20,54 @@
     &:last-child {
       padding: 10px;
       text-align: left;
-      width: calc(100% - 120px);
+      width: calc(100% - 150px);
+    }
+
+    @media (max-width: 576px) {
+      &:first-child {
+        width: 120px;
+        height: 120px;
+      }
+
+      &:last-child {
+        width: calc(100% - 120px);
+      }
     }
   }
 
   span {
     color: #12a0d6;
     font-style: italic;
-    font-size: 22px;
+    white-space: pre-line;
+    margin-bottom: 10px;
+    display: block;
+    // font-size: 28px;
+    font-size: 26px;
+
+    // line-height: 24px;
+    line-height: 20px;
   }
 
   p {
-    font-size: 22px;
+    font-size: 28px;
     color: #002575;
-    line-height: 20px;
+    white-space: pre-line;
+    // line-height: 24px;
+    line-height: 22px;
+    font-size: 26px;
+  }
+
+  @media (max-width: 576px) {
+    span {
+      line-height: 20px;
+    }
+
+    p {
+      line-height: 22px;
+    }
+    span,
+    p {
+      font-size: 26px;
+    }
   }
 }

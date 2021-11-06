@@ -6,12 +6,24 @@
 h1 {
   color: #f3dd81;
   text-align: center;
-  white-space: pre-line;
   font-size: 48px;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   font-weight: 400;
+
+  &.white {
+    color: #fff;
+  }
 }
 
-h1.white {
-  color: #fff;
+li {
+  font-size: 36px;
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  li {
+    font-size: 28px;
+  }
 }

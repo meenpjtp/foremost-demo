@@ -10,8 +10,8 @@ nav {
   }
 
   > div {
-    padding: 5px;
     &.navigation-top {
+      padding: 5px;
       background-color: #7fbdf0;
       display: flex;
       justify-content: flex-end;
@@ -26,13 +26,14 @@ nav {
         }
       }
 
-      @media (max-width: 576px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }
     &.navigation-bottom {
       background-color: #4299f8;
       position: relative;
+      padding: 10px 20px;
 
       &.mobile {
         display: none;
@@ -41,7 +42,7 @@ nav {
       &.desktop {
         .container {
           margin: auto;
-          padding: 0 20px;
+          //   padding: 0 20px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -66,7 +67,7 @@ nav {
         }
       }
 
-      @media (max-width: 576px) {
+      @media (max-width: 768px) {
         &.mobile {
           display: flex;
           align-items: center;
@@ -77,6 +78,7 @@ nav {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 50px;
           }
 
           label {
@@ -110,7 +112,7 @@ nav {
             box-shadow: 2px 3px 2px #007bdf;
 
             img {
-              width: 30px;
+              width: 25px;
             }
           }
         }
