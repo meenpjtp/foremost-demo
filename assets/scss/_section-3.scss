@@ -3,12 +3,12 @@ section.section-3 {
   background-color: #00a6eb;
   overflow: hidden;
 
-  @media (max-width: 576px) {
-    padding-bottom: 60px;
+  @media (max-width: 992px) {
+    padding-bottom: 50%;
     &:after {
       content: "";
       position: absolute;
-      bottom: -140px;
+      bottom: -10%;
       left: 0;
       height: 100%;
       width: 100%;
@@ -16,6 +16,13 @@ section.section-3 {
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: contain;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 20%;
+    &:after {
+      bottom: -5%;
     }
   }
 
@@ -41,8 +48,9 @@ section.section-3 {
       width: 100%;
       margin: auto;
 
-      @media (max-width: 576px) {
-        padding: 0 20px 200px;
+      @media (max-width: 992px) {
+        // padding: 0 20px 200px;
+        padding: 0 20px 60%;
 
         &:after {
           content: "";
@@ -50,7 +58,8 @@ section.section-3 {
           left: 0;
           width: 100%;
           height: 100%;
-          bottom: -90px;
+          //   bottom: -90px;
+          bottom: -10%;
           background-image: url("~assets/image/coffee-bg-mobile-1.png");
           background-size: contain;
           background-repeat: no-repeat;
@@ -88,7 +97,7 @@ section.section-3 {
       width: 100%;
       margin-top: -60px;
 
-      @media (max-width: 576px) {
+      @media (max-width: 992px) {
         display: none;
       }
     }
@@ -137,7 +146,11 @@ section.section-3 {
       padding: 0 80px;
       margin-top: -150px;
 
-      @media (max-width: 576px) {
+      //   @media (max-width: 992px) {
+      //     padding: 0 40px;
+      //   }
+
+      @media (max-width: 992px) {
         margin-top: 0;
         padding: 0;
       }
@@ -149,8 +162,22 @@ section.section-3 {
 
     .container-wrapper {
       padding: 0 80px;
+      @media (max-width: 992px) {
+        padding: 0px;
+
+        .row:nth-child(2) {
+          a:last-child {
+            margin-top: 40px;
+          }
+        }
+      }
       @media (max-width: 576px) {
         padding: 40px 0px;
+        .row:nth-child(2) {
+          a:last-child {
+            margin-top: 0px;
+          }
+        }
       }
       .wrapper {
         margin-bottom: 80px;
@@ -185,6 +212,20 @@ section.section-3 {
         margin-bottom: 40px;
       }
 
+      @media (max-width: 992px) {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+
+        .button-capsule {
+        //   margin-bottom: 20px;
+          width: 100%;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
       @media (max-width: 576px) {
         padding: 40px 20px;
         .button-capsule {
@@ -198,8 +239,6 @@ section.section-3 {
           }
 
           &:last-child {
-            margin-bottom: 0;
-
             p {
               font-size: 22px;
               line-height: 17px;
@@ -215,6 +254,10 @@ section.section-3 {
 
     .container-video {
       padding: 0 160px 100px;
+
+      @media (max-width: 992px) {
+        padding: 0 60px 60px;
+      }
       .wrapper-iframe {
         box-shadow: 10px 10px 20px rgba(#054790, 0.5);
         border-image-source: linear-gradient(
@@ -266,7 +309,7 @@ section.section-3 {
     display: flex;
     margin-top: -24%;
 
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       display: none;
     }
   }
