@@ -151,9 +151,8 @@
     <section class="section-2">
       <div class="container">
         <div class="wrapper-container">
-          <h1 ref="text1Ref">
-            รู้หรือไม่...กลิ่นหอมของกาแฟ จะช่วยให้ร่างกายรู้สึกสดชื่นขึ้น?
-          </h1>
+          <h1 ref="text1Ref">รู้หรือไม่...กลิ่นหอมของกาแฟ 
+              จะช่วยให้ร่างกายรู้สึกสดชื่นขึ้น?</h1>
           <h1 class="white" ref="text2Ref">หากคุณรู้สึก</h1>
           <div class="wrapper">
             <ul class="container-btn" ref="listsRef">
@@ -162,9 +161,8 @@
               <li><nuxt-link to="#">รู้สึกไม่สดใสยามบ่าย</nuxt-link></li>
             </ul>
           </div>
-          <h1 ref="text3Ref">
-            ใหม่ โฟร์โมสต์ คอฟฟี่ ลาเต้ ผสานกาแฟโรบัสต้าและนมโคคุณภาพ
-          </h1>
+          <h1 ref="text3Ref">ใหม่ โฟร์โมสต์ คอฟฟี่ ลาเต้ 
+              ผสานกาแฟโรบัสต้าและนมโคคุณภาพ</h1>
         </div>
 
         <!-- Desktop -->
@@ -307,7 +305,7 @@
 <script>
 // Images
 import banner from "~/assets/image/banner-plain.jpg";
-import bannerMobile from "~/assets/image/banner-mobile-plain.png";
+import bannerMobile from "~/assets/image/_banner-mobile-plain.png";
 import logo from "~/assets/image/logo.png";
 import cart from "~/assets/image/icon-cart.png";
 // section 2 img
