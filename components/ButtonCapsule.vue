@@ -10,6 +10,11 @@
 
 <script>
 export default {
-    props: ['img', 'title', 'text']
+    props: ['img', 'title', 'text'],
+    methods: {
+        click() {
+            this.$emit("copy", { xx : 'xxxx'})
+        }
+    }
 }
 </script>

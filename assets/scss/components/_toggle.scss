@@ -1,0 +1,48 @@
+.toggle {
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 150px;
+  display: none !important;
+  top: 50px;
+
+  @media (max-width: 768px) {
+    display: none !important;
+    // position: relative;
+    // top: unset;
+    // width: unset;
+    // border: 0;
+    // li {
+    //   a {
+    //     margin-bottom: 0;
+    //   }
+    // }
+  }
+
+  &.active {
+    display: block !important;
+    @media (max-width: 768px) {
+      display: none !important;
+      // position: relative;
+      // top: unset;
+      // width: unset;
+      // border: 0;
+      // li {
+      //   a {
+      //     margin-bottom: 0;
+      //   }
+      // }
+    }
+  }
+  a {
+    color: #000 !important;
+    font-size: 18px !important;
+    padding: 10px !important;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #f37102 !important;
+    }
+  }
+}

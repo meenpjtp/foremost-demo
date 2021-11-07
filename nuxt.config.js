@@ -10,7 +10,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'นมโฟร์โมสต์ นมโคแท้ 100% นมกล่องสำหรับเด็ก นมยูเอชที ยี่ห้อนมโคที่มีสารอาหาร แคลเซียมสูง มีให้คุณเลือกหลากหลายรสชาติความอร่อย ดีต่อสุขภาพของทุกคนในครอบครัว ดูที่นี่' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'og:image', property: 'og:image', content: "https://hungry-blackwell-c29b34.netlify.app/_nuxt/assets/image/banner2.jpg" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

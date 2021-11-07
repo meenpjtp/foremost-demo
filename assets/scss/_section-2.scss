@@ -1,4 +1,5 @@
-section.middle {
+section.section-2 {
+    overflow: hidden;
   position: relative;
   background: linear-gradient(
     0deg,
@@ -23,6 +24,7 @@ section.middle {
 
   &:before {
     background-image: url("~assets/image/gradient-desktop.png");
+    background-attachment: fixed;
   }
 
   &:after {
@@ -32,6 +34,7 @@ section.middle {
   @media (max-width: 992px) {
     &:before {
       background-image: url("~assets/image/gradient-mobile.png");
+      background-attachment: unset;
     }
   }
 
@@ -81,6 +84,26 @@ section.middle {
   img {
     display: flex;
     width: 100%;
+
+    &.smellgood {
+      position: absolute;
+      bottom: 140px;
+      left: 120px;
+      width: 400px;
+      z-index: 9;
+
+      @media (max-width: 992px) {
+        bottom: 90px;
+        left: 60px;
+        width: 300px;
+      }
+
+      @media (max-width: 576px) {
+        bottom: 50px;
+        left: 30px;
+        width: 150px;
+      }
+    }
 
     &.desktop {
       &.milk {

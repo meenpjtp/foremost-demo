@@ -30,12 +30,17 @@ section.section-3 {
     z-index: 1;
     position: relative;
     .wrapper-tagline {
-      padding: 40px 20px;
+      padding: 80px 20px 60px;
       display: flex;
       justify-content: center;
+
+      @media (max-width: 576px) {
+          padding: 40px 20px;
+      }
       img {
         width: 100%;
-        max-width: 500px;
+        max-width: 700px;
+        height: 100%;
       }
     }
 
@@ -71,6 +76,70 @@ section.section-3 {
         max-width: 400px;
         width: 100%;
         z-index: 1;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-name: bounce;
+          animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        &.coffee-1:before {
+          background-image: url(~assets/image/coffee-01.png);
+          width: 100px;
+          height: 100px;
+          top: -20px;
+          left: 70px;
+          width: 80px;
+          height: 80px;
+
+          @media (max-width: 576px) {
+            top: -80px;
+            right: 10px;
+            left: unset;
+          }
+        }
+
+        &.coffee-2:before {
+          background-image: url(~assets/image/coffee-02.png);
+          width: 100px;
+          height: 100px;
+          bottom: -20px;
+          left: 100px;
+          width: 60px;
+          height: 60px;
+
+          @media (max-width: 576px) {
+            bottom: -60px;
+            left: 0;
+          }
+        }
+
+        &.coffee-3:before {
+          background-image: url(~assets/image/coffee-03.png);
+          width: 100px;
+          height: 100px;
+          top: 150px;
+          right: -40px;
+          width: 60px;
+          height: 60px;
+
+          @media (max-width: 576px) {
+            right: -70px;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
 
         &:nth-child(odd) {
           margin-right: auto;
@@ -82,8 +151,10 @@ section.section-3 {
           margin-bottom: -170px;
         }
         @media (max-width: 576px) {
-          max-width: 200px;
-          overflow: hidden;
+            max-width: unset;
+            width: 60%;
+        //   max-width: 200px;
+          //   overflow: hidden;
           &:nth-child(even) {
             margin-left: auto;
             margin-top: -40px;
@@ -124,7 +195,7 @@ section.section-3 {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(~assets/image/cover-video.jpg);
+        // background-image: url(~assets/image/cover-video.jpg);
         z-index: 99;
         background-position: center;
         background-size: cover;
@@ -171,12 +242,28 @@ section.section-3 {
           }
         }
       }
-      @media (max-width: 576px) {
+      @media (max-width: 600px) {
         padding: 40px 0px;
-        .row:nth-child(2) {
-          a:last-child {
-            margin-top: 0px;
+        .row {
+          &:nth-child(2) {
+            a:last-child {
+              margin-top: 0px;
+            }
           }
+          .badge {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        .row a {
+          padding: 0 !important;
+        }
+        .badge {
+          width: 120px;
+          height: 120px;
         }
       }
       .wrapper {
@@ -188,6 +275,7 @@ section.section-3 {
 
         img {
           max-width: 500px;
+          height: 100%;
           width: 100%;
           margin-bottom: 40px;
         }
@@ -218,7 +306,7 @@ section.section-3 {
         margin: auto;
 
         .button-capsule {
-        //   margin-bottom: 20px;
+          //   margin-bottom: 20px;
           width: 100%;
           &:last-child {
             margin-bottom: 0;
@@ -228,6 +316,7 @@ section.section-3 {
 
       @media (max-width: 576px) {
         padding: 40px 20px;
+        max-width: 450px;
         .button-capsule {
           margin-bottom: 20px;
           width: 100%;
@@ -266,7 +355,7 @@ section.section-3 {
           rgba(0, 185, 255, 1) 100%
         );
         &:before {
-          background-image: url(~assets/image/cover-video-2.jpg) !important;
+        //   background-image: url(~assets/image/cover-video-2.jpg) !important;
         }
       }
       @media (max-width: 576px) {
@@ -275,30 +364,33 @@ section.section-3 {
     }
 
     .wrapper-row {
+      @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column-reverse;
+        .row {
+          a {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+      }
       .row {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin-bottom: 40px;
 
+        a {
+          padding: 0 20px;
+        }
+
         &:last-child {
           margin-bottom: 0;
-        }
-      }
-
-      @media (max-width: 576px) {
-        display: flex;
-        flex-direction: column-reverse;
-
-        .row {
-          a {
-            padding-bottom: 20px;
-          }
-        }
-
-        .badge {
-          width: 130px;
-          height: 130px;
         }
       }
     }
@@ -312,5 +404,16 @@ section.section-3 {
     @media (max-width: 992px) {
       display: none;
     }
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
